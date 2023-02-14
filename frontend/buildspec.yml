@@ -14,5 +14,5 @@ phases:
   #     - zip -r artifact.zip .
 artifacts:
   files:
-    - ./frontend/dist/**/**
+    - "**/*"
   base-directory: frontend/dist
