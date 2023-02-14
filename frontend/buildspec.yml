@@ -8,10 +8,6 @@ phases:
       - cd frontend
       - npm i
       - npm run build
-  # post_build:
-  #   commands:
-  #     - cd dist
-  #     - zip -r artifact.zip .
 artifacts:
   files:
     - "**/*"
