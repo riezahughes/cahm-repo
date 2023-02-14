@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - cd frontend
+      - npm i
+  build:
+    commands:
+      - cd frontend
+      - npm run build
+  post_build:
+    commands:
+      - cd frontend/dist
+      - zip -r artifact.zip .
+artifacts:
+  files:
+    - frontend/dist/artifact.zip
+  name: sitebuild
