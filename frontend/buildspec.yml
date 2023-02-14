@@ -1,5 +1,4 @@
 version: 0.2
-
 phases:
   install:
     commands:
@@ -7,11 +6,10 @@ phases:
       - npm i
   build:
     commands:
-      - cd frontend
       - npm run build
   post_build:
     commands:
-      - cd frontend/dist
+      - cd dist
       - zip -r artifact.zip .
 artifacts:
   files:
